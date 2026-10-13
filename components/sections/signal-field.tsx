@@ -53,7 +53,7 @@ export function SignalField() {
           if (node.x < 0 || node.x > width) node.vx *= -1
           if (node.y < 0 || node.y > height) node.vy *= -1
         }
-        context.globalAlpha = 0.45
+        context.globalAlpha = 0.22
         context.beginPath()
         context.arc(node.x, node.y, 1.4, 0, Math.PI * 2)
         context.fill()
@@ -67,7 +67,7 @@ export function SignalField() {
           const dy = a.y - b.y
           const dist = Math.hypot(dx, dy)
           if (dist < 150) {
-            context.globalAlpha = (1 - dist / 150) * 0.22
+            context.globalAlpha = (1 - dist / 150) * 0.12
             context.beginPath()
             context.moveTo(a.x, a.y)
             context.lineTo(b.x, b.y)

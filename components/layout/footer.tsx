@@ -5,8 +5,8 @@ import { nav, site } from "@/lib/content"
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:px-8 lg:grid-cols-[1.4fr_1fr_1fr]">
-        <div className="max-w-sm">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 md:px-8 lg:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="max-w-sm sm:col-span-2 lg:col-span-1">
           <ThemedLogo variant="tagline" />
           <p className="mt-5 max-w-[42ch] text-sm leading-relaxed text-muted-foreground">
             A data intelligence, research and advisory firm headquartered in

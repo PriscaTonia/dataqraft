@@ -57,7 +57,7 @@ export function Navbar() {
           : "border-transparent bg-transparent"
       )}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center gap-6 px-5 md:px-8">
+      <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4 sm:gap-6 sm:px-5 md:px-8">
         <a
           href="#top"
           aria-label="Data Qraft Limited"
@@ -97,7 +97,7 @@ export function Navbar() {
             href="#contact"
             className={cn(
               buttonVariants({ variant: "signal" }),
-              "hidden h-9 px-3.5 sm:inline-flex"
+              "hidden h-9 px-3.5 md:inline-flex"
             )}
           >
             Request a briefing

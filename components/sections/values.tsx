@@ -23,16 +23,20 @@ const icons: Record<(typeof values.items)[number]["icon"], LucideIcon> = {
 export function Values() {
   return (
     <section id="values" className="scroll-mt-24 border-t border-border">
-      <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24 lg:py-32">
         <Reveal>
           <SectionHeading index={values.index} title={values.title} />
         </Reveal>
-        <ol className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
+        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {values.items.map((item, index) => {
             const Icon = icons[item.icon]
             const highlighted = "highlight" in item && item.highlight
             return (
-              <Reveal key={item.number} delay={index * 0.06}>
+              <Reveal
+                key={item.number}
+                delay={index * 0.06}
+                className="h-full lg:col-span-2 lg:nth-4:col-start-2 lg:nth-5:col-start-4"
+              >
                 <li
                   className={cn(
                     "h-full rounded-2xl border border-border bg-card p-5 shadow-[0_18px_50px_-32px_rgba(14,26,46,0.4)] dark:shadow-none",

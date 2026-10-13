@@ -14,7 +14,7 @@ const icons: Record<(typeof services.items)[number]["icon"], LucideIcon> = {
 export function Services() {
   return (
     <section id="services" className="scroll-mt-24 border-t border-border">
-      <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24 lg:py-32">
         <Reveal>
           <SectionHeading
             index={services.index}
@@ -28,7 +28,7 @@ export function Services() {
             return (
               <Reveal key={item.id} delay={index * 0.08}>
                 <SpotlightCard className="h-full">
-                  <article className="flex h-full flex-col p-7">
+                  <article className="flex h-full flex-col p-5 sm:p-7">
                     <div className="flex items-center justify-between">
                       <p className="font-mono text-[11px] tracking-[0.22em] text-muted-foreground uppercase">
                         {item.index}

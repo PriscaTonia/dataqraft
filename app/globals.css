@@ -214,13 +214,62 @@ body::before {
   animation: scroll-nudge 2.4s ease-in-out infinite;
 }
 
+.hero-route {
+  stroke-dasharray: 3 9;
+  animation: hero-route 9s linear infinite;
+}
+
+.hero-hub {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.hero-hub:focus-visible {
+  outline: none;
+}
+
+.hero-pulse {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hero-hub:hover .hero-pulse,
+.hero-hub:focus-visible .hero-pulse {
+  animation: hero-pulse 1.45s ease-out infinite;
+}
+
+@keyframes hero-route {
+  to {
+    stroke-dashoffset: -72;
+  }
+}
+
+@keyframes hero-pulse {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.45);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .marquee-track,
-  .scroll-cue {
+  .scroll-cue,
+  .hero-route,
+  .hero-pulse {
     animation: none;
+  }
+  .hero-hub:hover .hero-pulse,
+  .hero-hub:focus-visible .hero-pulse {
+    opacity: 1;
+    transform: none;
   }
   .marquee-animated {
     display: none !important;

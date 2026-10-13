@@ -68,9 +68,12 @@ export function ContactForm() {
         <form
           onSubmit={form.handleSubmit(onSubmit, () => setSubmitted(false))}
           noValidate
-          className="relative grid gap-5 p-6 md:p-8"
+          className="relative grid gap-5 p-5 sm:p-6 md:p-8"
         >
-          <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden>
+          <div
+            className="absolute top-0 left-0 -z-10 h-0 w-0 overflow-hidden"
+            aria-hidden
+          >
             <label>
               Website
               <input

@@ -24,7 +24,7 @@ export function ThemedLogo({
 }: ThemedLogoProps) {
   if (variant === "tagline") {
     return (
-      <span className={cn("inline-flex flex-col", className)}>
+      <span className={cn("inline-flex flex-col items-start", className)}>
         <Image
           src={tagline.navy.src}
           alt="Data Qraft Limited. Research, Data, Intelligence."
@@ -38,7 +38,7 @@ export function ThemedLogo({
           wordmark plus the tagline set in type until
           public/brand/dql-logo-white-tagline.svg is added.
         */}
-        <span className="hidden flex-col dark:inline-flex">
+        <span className="hidden flex-col items-start dark:inline-flex">
           <Image
             src={compact.white.src}
             alt="Data Qraft Limited"
@@ -62,7 +62,7 @@ export function ThemedLogo({
         width={compact.navy.width}
         height={compact.navy.height}
         priority={priority}
-        className="h-8 w-auto dark:hidden"
+        className="h-7 w-auto sm:h-8 dark:hidden"
       />
       <Image
         src={compact.white.src}
@@ -70,7 +70,7 @@ export function ThemedLogo({
         width={compact.white.width}
         height={compact.white.height}
         priority={priority}
-        className="hidden h-8 w-auto dark:block"
+        className="hidden h-7 w-auto sm:h-8 dark:block"
       />
     </span>
   )

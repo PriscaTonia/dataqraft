@@ -196,19 +196,18 @@ export const model = {
 export const clients = {
   index: "06 / Clients",
   title: "Trusted by institutions across sectors.",
-  // TODO: replace wordmarks with logo files in public/clients/ (transparent PNG or SVG, one file per name).
-  names: [
-    "Eagle Hills",
-    "Bank of Agriculture",
-    "Beam Suntory",
-    "China Minmetals Corporation",
-    "Dangote",
-    "Pernod Ricard",
-    "NNPC",
-    "Government of Enugu State",
-    "National Sugar Development Council",
-    "Oil&Gas Middle East",
-    "Sohar International",
+  logos: [
+    { name: "Eagle Hills", src: "/clients/eagle-hills.png", width: 95, height: 135 },
+    { name: "Bank of Agriculture", src: "/clients/bank-of-agriculture.png", width: 183, height: 106 },
+    { name: "Beam Suntory", src: "/clients/beam-suntory.png", width: 273, height: 63 },
+    { name: "China Minmetals Corporation", src: "/clients/china-minmetals.png", width: 278, height: 76 },
+    { name: "Dangote", src: "/clients/dangote.png", width: 160, height: 87 },
+    { name: "Pernod Ricard", src: "/clients/pernod-ricard.png", width: 266, height: 109 },
+    { name: "NNPC", src: "/clients/nnpc.png", width: 210, height: 130 },
+    { name: "Government of Enugu State", src: "/clients/government-of-enugu-state.png", width: 152, height: 147 },
+    { name: "National Sugar Development Council", src: "/clients/national-sugar-development-council.png", width: 307, height: 71 },
+    { name: "Oil&Gas Middle East", src: "/clients/oil-and-gas-middle-east.png", width: 227, height: 70 },
+    { name: "Sohar International", src: "/clients/sohar-international.png", width: 265, height: 95 },
   ],
 } as const
 

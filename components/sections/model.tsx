@@ -13,7 +13,7 @@ const icons: Record<(typeof model.pillars)[number]["icon"], LucideIcon> = {
 export function Model() {
   return (
     <section id="model" className="scroll-mt-24 border-t border-border">
-      <div className="mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
+      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24 lg:py-32">
         <Reveal>
           <SectionHeading index={model.index} title={model.title} />
         </Reveal>

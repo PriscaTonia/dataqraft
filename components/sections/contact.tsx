@@ -33,7 +33,7 @@ const details = [
 export function Contact() {
   return (
     <section id="contact" className="scroll-mt-24 border-t border-border">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 md:px-8 md:py-32 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:px-8 md:py-24 lg:py-32 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div>
           <SectionHeading
             index={contact.index}
