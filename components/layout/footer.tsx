@@ -43,18 +43,24 @@ export function Footer() {
               {site.addressLines[1]}
             </p>
             <p>
-              <a className="hover:text-signal" href={site.phoneHref}>
+              <a
+                className="outline-none hover:text-signal focus-visible:ring-3 focus-visible:ring-ring/50"
+                href={site.phoneHref}
+              >
                 {site.phoneDisplay}
               </a>
             </p>
             <p>
-              <a className="hover:text-signal" href={`mailto:${site.email}`}>
+              <a
+                className="outline-none hover:text-signal focus-visible:ring-3 focus-visible:ring-ring/50"
+                href={`mailto:${site.email}`}
+              >
                 {site.email}
               </a>
             </p>
             <p>
               <a
-                className="hover:text-signal"
+                className="outline-none hover:text-signal focus-visible:ring-3 focus-visible:ring-ring/50"
                 href={site.url}
                 rel="noopener noreferrer"
               >

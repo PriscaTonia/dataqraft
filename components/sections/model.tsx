@@ -50,7 +50,7 @@ export function Model() {
                   return (
                     <li
                       key={pillar.title}
-                      className="flex items-center gap-4 rounded-xl border border-border bg-card px-4 py-4"
+                      className="flex items-start gap-4 rounded-xl border border-border bg-card px-4 py-4"
                     >
                       <span className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border">
                         <Icon className="size-4 text-signal" aria-hidden />
@@ -61,6 +61,9 @@ export function Model() {
                         </p>
                         <p className="mt-1 text-base font-medium tracking-tight">
                           {pillar.title}
+                        </p>
+                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                          {pillar.description}
                         </p>
                       </div>
                     </li>

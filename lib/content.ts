@@ -9,7 +9,7 @@ export const site = {
   phoneHref: "tel:+2348121912270",
   addressLines: ["2, Idowu Taylor Street", "Victoria Island, Lagos, Nigeria"],
   address: "2, Idowu Taylor Street, Victoria Island, Lagos, Nigeria",
-  tagline: "Hindsight . Insight . Foresight",
+  tagline: "Hindsight · Insight · Foresight",
   logoTagline: "Research | Data | Intelligence",
   title: "Data Qraft Limited | Data Intelligence, Research & Advisory",
   description:
@@ -18,26 +18,26 @@ export const site = {
 } as const
 
 export const nav = [
-  { href: "#about", id: "about", label: "About" },
-  { href: "#services", id: "services", label: "Services" },
   { href: "#method", id: "method", label: "Method" },
+  { href: "#about", id: "about", label: "About" },
   { href: "#values", id: "values", label: "Values" },
+  { href: "#services", id: "services", label: "Services" },
   { href: "#clients", id: "clients", label: "Clients" },
   { href: "#contact", id: "contact", label: "Contact" },
 ] as const
 
 export const hero = {
-  eyebrow: "Data intelligence · Research · Advisory — Lagos, Nigeria",
-  title: "Raw data into decisive intelligence.",
+  eyebrow: "Data intelligence · Research · Advisory",
+  title: "From data to decision.",
   subhead:
     "Data Qraft turns complex data and localized sentiment into strategic intelligence for Africa's most critical decision-makers.",
   primaryCta: "Request a briefing",
   secondaryCta: "Explore our services",
-  marks: ["Hindsight", "Insight", "Foresight"],
+  trustLine: "Lagos-headquartered · Serving B2B and B2G institutions",
 } as const
 
 export const about = {
-  index: "01 / About",
+  index: "02 / About",
   title: "A data intelligence, research and advisory firm.",
   body: "Data Qraft Limited (DQL) is a data intelligence, research, and advisory firm headquartered in Lagos, Nigeria. We offer market insight, socioeconomic intelligence and statecraft support services. DQL transforms raw data and localized sentiment into decisive strategic intelligence for critical decision-making.",
   expertiseTitle: "Our global expertise",
@@ -54,7 +54,7 @@ export const about = {
 } as const
 
 export const services = {
-  index: "02 / Services",
+  index: "04 / Services",
   title: "What we deliver",
   description:
     "Three practices. Each one turns local evidence into something a decision-maker can use.",
@@ -90,7 +90,7 @@ export const services = {
 } as const
 
 export const method = {
-  index: "03 / Method",
+  index: "01 / Method",
   title: "From what happened, to what it means, to what comes next.",
   description: "Hindsight. Insight. Foresight. The sequence behind every engagement.",
   stages: [
@@ -136,7 +136,7 @@ export const visionMission = {
 } as const
 
 export const values = {
-  index: "04 / Values",
+  index: "03 / Values",
   title: "How we operate.",
   items: [
     {
@@ -162,7 +162,6 @@ export const values = {
       icon: "lock",
       title: "Strategic Discretion",
       description: "Engagements are held in strict confidence.",
-      highlight: true,
     },
     {
       number: "05",
@@ -187,9 +186,21 @@ export const model = {
   selection:
     "DQL does not operate as a volume-driven data mill. To maintain brand integrity, operational focus, and alignment with our core values, every potential engagement is filtered through a strict three-pillar assessment.",
   pillars: [
-    { icon: "scale", title: "Ethical Considerations" },
-    { icon: "target", title: "Level of Impact" },
-    { icon: "heart", title: "Service to Humanity" },
+    {
+      icon: "scale",
+      title: "Ethical Considerations",
+      description: "No engagement compromises our independence or integrity.",
+    },
+    {
+      icon: "target",
+      title: "Level of Impact",
+      description: "Priority goes to work with measurable, meaningful outcomes.",
+    },
+    {
+      icon: "heart",
+      title: "Service to Humanity",
+      description: "Every mandate must serve people, not just power or profit.",
+    },
   ],
 } as const
 
@@ -203,7 +214,12 @@ export const clients = {
     { name: "China Minmetals Corporation", src: "/clients/china-minmetals.png", width: 278, height: 76 },
     { name: "Dangote", src: "/clients/dangote.png", width: 160, height: 87 },
     { name: "Pernod Ricard", src: "/clients/pernod-ricard.png", width: 266, height: 109 },
-    { name: "NNPC", src: "/clients/nnpc.png", width: 210, height: 130 },
+    {
+      name: "Nigerian National Petroleum Corporation (NNPC)",
+      src: "/clients/nnpc.png",
+      width: 210,
+      height: 130,
+    },
     { name: "Government of Enugu State", src: "/clients/government-of-enugu-state.png", width: 152, height: 147 },
     { name: "National Sugar Development Council", src: "/clients/national-sugar-development-council.png", width: 307, height: 71 },
     { name: "Oil&Gas Middle East", src: "/clients/oil-and-gas-middle-east.png", width: 227, height: 70 },

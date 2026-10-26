@@ -2,7 +2,15 @@ import { visionMission } from "@/lib/content"
 
 export function VisionMission() {
   return (
-    <section className="bg-[#05080F] text-[#F2F5FA]">
+    <section className="relative overflow-hidden bg-[#0E1A2E] text-[#F2F5FA] dark:bg-[#05080F]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-14 bg-linear-to-b from-background to-transparent"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-linear-to-t from-background to-transparent"
+      />
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2 md:gap-x-0 md:gap-y-6 md:px-8 md:py-24 lg:py-32">
         <span
           aria-hidden
@@ -48,7 +56,7 @@ function Quote({
         <span aria-hidden className="size-1 rounded-full bg-[#C79A5B] md:hidden" />
         {label}
       </figcaption>
-      <blockquote className="mt-6 font-serif text-[clamp(1.55rem,3.2vw,2.6rem)] leading-[1.2] font-medium tracking-tight text-balance italic md:mt-0">
+      <blockquote className="mt-6 font-heading text-[clamp(1.55rem,3.2vw,2.6rem)] leading-[1.2] font-medium tracking-tight text-balance md:mt-0">
         {quote}
       </blockquote>
       <p className="mt-6 max-w-[42ch] text-sm leading-relaxed text-[#8A97AB] md:mt-0">

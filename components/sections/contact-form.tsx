@@ -1,6 +1,7 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
+import { Loader2 } from "lucide-react"
 import { useState } from "react"
 import { useForm, type Resolver } from "react-hook-form"
 import { toast } from "sonner"
@@ -201,7 +202,14 @@ export function ContactForm() {
             className="h-11"
             disabled={form.formState.isSubmitting}
           >
-            {form.formState.isSubmitting ? "Sending" : "Request a briefing"}
+            {form.formState.isSubmitting ? (
+              <>
+                <Loader2 className="size-4 animate-spin" aria-hidden />
+                Sending
+              </>
+            ) : (
+              "Request a briefing"
+            )}
           </Button>
           <p className="text-xs leading-relaxed text-muted-foreground">
             {site.confidentiality}

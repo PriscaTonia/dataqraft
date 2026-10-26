@@ -16,7 +16,7 @@ function LogoTile({
   return (
     <span
       className={cn(
-        "flex min-h-24 w-full min-w-0 items-center justify-center rounded-xl bg-white px-4 py-4 shadow-sm ring-1 ring-[#DCE3EE] dark:bg-[#F2F5FA] dark:shadow-none dark:ring-0",
+        "flex min-h-20 w-full min-w-0 items-center justify-center rounded-xl bg-white px-4 py-4 shadow-sm ring-1 ring-[#DCE3EE] transition-shadow duration-300 group-hover:shadow-md dark:bg-[#F2F5FA] dark:shadow-none dark:ring-0",
         className
       )}
     >
@@ -25,7 +25,7 @@ function LogoTile({
         alt={logo.name}
         width={logo.width}
         height={logo.height}
-        className="h-14 w-auto max-w-full object-contain"
+        className="h-10 w-auto max-w-full object-contain"
       />
     </span>
   )
@@ -36,7 +36,7 @@ export function Clients() {
   const rowB = clients.logos.slice(6)
 
   return (
-    <section id="clients" className="scroll-mt-24 border-t border-border">
+    <section id="clients" className="scroll-mt-24 border-t border-border bg-surface-subtle">
       <div className="mx-auto max-w-6xl px-5 pt-16 pb-10 md:px-8 md:pt-24 lg:pt-32">
         <SectionHeading index={clients.index} title={clients.title} />
         <ul className="sr-only">

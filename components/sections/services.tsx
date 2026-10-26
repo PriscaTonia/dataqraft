@@ -13,7 +13,7 @@ const icons: Record<(typeof services.items)[number]["icon"], LucideIcon> = {
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-24 border-t border-border">
+    <section id="services" className="scroll-mt-24 border-t border-border bg-surface-subtle">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24 lg:py-32">
         <Reveal>
           <SectionHeading
@@ -22,11 +22,11 @@ export function Services() {
             description={services.description}
           />
         </Reveal>
-        <div className="mt-12 grid gap-4 lg:grid-cols-3">
+        <div className="mt-12 grid items-stretch gap-4 lg:grid-cols-3">
           {services.items.map((item, index) => {
             const Icon = icons[item.icon]
             return (
-              <Reveal key={item.id} delay={index * 0.08}>
+              <Reveal key={item.id} delay={index * 0.08} className="h-full">
                 <SpotlightCard className="h-full">
                   <article className="flex h-full flex-col p-5 sm:p-7">
                     <div className="flex items-center justify-between">
@@ -35,7 +35,7 @@ export function Services() {
                       </p>
                       <Icon className="size-4 text-signal" aria-hidden />
                     </div>
-                    <h3 className="mt-8 text-xl leading-snug font-medium tracking-tight">
+                    <h3 className="mt-8 flex min-h-14 items-start text-xl leading-snug font-medium tracking-tight">
                       {item.title}
                     </h3>
                     <p className="mt-4 text-sm leading-[1.7] text-muted-foreground">
@@ -45,7 +45,7 @@ export function Services() {
                       {item.tags.map((tag) => (
                         <li
                           key={tag}
-                          className="font-mono text-[10px] tracking-[0.16em] text-muted-foreground uppercase"
+                          className="inline-flex items-center rounded-full border border-border/70 bg-secondary/60 px-2.5 py-1 font-mono text-[10px] tracking-[0.14em] text-muted-foreground uppercase"
                         >
                           {tag}
                         </li>

@@ -22,8 +22,27 @@ export async function POST(request: Request) {
 
   const { companyWebsite, ...enquiry } = parsed.data
   void companyWebsite
-  // TODO: send this enquiry through Resend (or a similar transactional email service)
-  // to info@dataqraft.io. Logging is a stand-in until that is configured.
+
+  try {
+    const { getPayload } = await import("payload")
+    const config = (await import("@payload-config")).default
+    const payload = await getPayload({ config })
+    await payload.create({
+      collection: "inquiries",
+      data: {
+        name: enquiry.name,
+        email: enquiry.email,
+        organization: enquiry.organization,
+        interest: enquiry.interest,
+        message: enquiry.message,
+        status: "new",
+      },
+      overrideAccess: true,
+    })
+  } catch (err) {
+    console.error("Failed to save inquiry to Payload:", err)
+  }
+
   console.info("briefing request", enquiry)
 
   return Response.json({ ok: true })

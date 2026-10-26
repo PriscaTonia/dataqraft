@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
-import { Fraunces, Inter, JetBrains_Mono, Manrope, Sora } from "next/font/google"
+import { Inter, JetBrains_Mono, Manrope, Sora } from "next/font/google"
 
+import { AmbientBackground } from "@/components/layout/ambient-background"
 import { Footer } from "@/components/layout/footer"
 import { Navbar } from "@/components/layout/navbar"
 import { ThemeProvider } from "@/components/layout/theme-provider"
@@ -24,12 +25,6 @@ const sora = Sora({
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
-  display: "swap",
-})
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
   display: "swap",
 })
 
@@ -89,26 +84,33 @@ const organizationJsonLd = {
   },
 }
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${sora.variable} ${manrope.variable} ${fraunces.variable} ${jetbrains.variable} h-full antialiased`}
+      className={`${inter.variable} ${sora.variable} ${manrope.variable} ${jetbrains.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col" suppressHydrationWarning>
         <ThemeProvider>
-          <a
-            href="#content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-card focus:px-3 focus:py-2"
-          >
-            Skip to content
-          </a>
-          <Navbar />
-          <main id="content" className="flex-1">
-            {children}
-          </main>
-          <Footer />
+          <AmbientBackground />
+          <div className="relative z-10 flex min-h-full flex-1 flex-col">
+            <a
+              href="#content"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-60 focus:rounded-lg focus:bg-card focus:px-3 focus:py-2"
+            >
+              Skip to content
+            </a>
+            <Navbar />
+            <main id="content" className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
           <Toaster />
           <script
             type="application/ld+json"

@@ -4,7 +4,7 @@ import { about } from "@/lib/content"
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 border-t border-border">
+    <section id="about" className="scroll-mt-24 border-t border-border bg-surface-subtle">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:px-8 md:py-24 lg:py-32 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <SectionHeading index={about.index} title={about.title} />

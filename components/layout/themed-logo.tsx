@@ -1,14 +1,11 @@
 import Image from "next/image"
 
 import { cn } from "@/lib/utils"
+import { site } from "@/lib/content"
 
 const compact = {
   navy: { src: "/brand/dql-logo-navy.png", width: 1317, height: 559 },
   white: { src: "/brand/dql-logo-white.png", width: 1308, height: 557 },
-} as const
-
-const tagline = {
-  navy: { src: "/brand/dql-logo-navy-tagline.png", width: 1317, height: 651 },
 } as const
 
 type ThemedLogoProps = {
@@ -26,29 +23,21 @@ export function ThemedLogo({
     return (
       <span className={cn("inline-flex flex-col items-start", className)}>
         <Image
-          src={tagline.navy.src}
-          alt="Data Qraft Limited. Research, Data, Intelligence."
-          width={tagline.navy.width}
-          height={tagline.navy.height}
-          className="h-16 w-auto dark:hidden"
+          src={compact.navy.src}
+          alt="Data Qraft Limited"
+          width={compact.navy.width}
+          height={compact.navy.height}
+          className="h-9 w-auto dark:hidden"
         />
-        {/*
-          The supplied logo PDF has no white tagline export (and every page
-          has a solid background). Dark mode uses the transparent white
-          wordmark plus the tagline set in type until
-          public/brand/dql-logo-white-tagline.svg is added.
-        */}
-        <span className="hidden flex-col items-start dark:inline-flex">
-          <Image
-            src={compact.white.src}
-            alt="Data Qraft Limited"
-            width={compact.white.width}
-            height={compact.white.height}
-            className="h-9 w-auto"
-          />
-          <span className="mt-2 font-mono text-[10px] tracking-[0.18em] text-[#8A97AB] uppercase">
-            Research | Data | Intelligence
-          </span>
+        <Image
+          src={compact.white.src}
+          alt="Data Qraft Limited"
+          width={compact.white.width}
+          height={compact.white.height}
+          className="hidden h-9 w-auto dark:block"
+        />
+        <span className="mt-2 font-mono text-[10px] tracking-[0.18em] text-muted-foreground uppercase">
+          {site.logoTagline}
         </span>
       </span>
     )
